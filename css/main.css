@@ -21,8 +21,9 @@ img.responsive-img{
   }
   .format-image-claqueta{
     margin-top: 1em;
+    max-width: 50%;
   }
-  
+
   @media screen and (min-width:451px){
      header h2{
       font-family: 'Monoton', cursive;
