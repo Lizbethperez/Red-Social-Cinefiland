@@ -13,7 +13,40 @@
 <body>
     <main>
         <header>
-            <nav class="row"> 
+          <!--<seccion navbar>-->
+          <nav>
+              <div class="nav-wrapper">
+                <a href="#!" class="brand-logo left hide-on-large-only"><i class="material-icons">menu</i>Logo</a>
+                <ul class="right hide-on-med-and-down">
+                  <li><a href=""><i class="material-icons">search</i></a></li>
+                  <li><a href=""><i class="material-icons">view_module</i></a></li>
+                  <li><a href=""><i class="material-icons">refresh</i></a></li>
+                  <li><a href=""><i class="material-icons">more_vert</i></a></li>
+                  <li><a class="dropdown-trigger show-on-medium-and-up" href="#!" data-target="dropdown2">Local Movie Theatres<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+              </div>
+              <ul id="dropdown2" class="dropdown-content">
+                <li><a href="http://www.cinepolis.com/cartelera/guadalajara-norte-poniente/cinepolis-vip-andares" target="_blank">Cinepolis<span class="badge"></span></a></li>
+                <li><a href="https://cinemex.com/" target="_blank">Cinemex</a></li>
+                <li><a href="https://cinemex.com/platino?gclid=EAIaIQobChMIxenHw7jq2wIVAhFpCh1c4gbVEAAYASAAEgJsgPD_BwE" target="_blank">Cinemex Platino</a></li>
+              </ul>
+            </nav>
+                <!--<seccion carrusel >-->
+            <div class="row">
+              <div class="carousel carousel-slider col s6 offset-s3 ">
+                <a class="carousel-item dist" href="#one!"><img responsive-img src="assets/images/8.jpg"></a>
+                <a class="carousel-item dist" href="#two!"><img responsive-img src="assets/images/9.jpg"></a>
+                <a class="carousel-item dist" href="#four!"><img responsive-img src="assets/images/11.jpg"></a>
+                <a class="carousel-item dist" href="#five!"><img responsive-img src="assets/images/12.jpg"></a>
+                <a class="carousel-item dist" href="#five!"><img responsive-img src="assets/images/13.jpg"></a>
+                <a class="carousel-item dist" href="#five!"><img responsive-img src="assets/images/14.jpg"></a>
+                <a class="carousel-item dist" href="#five!"><img responsive-img src="assets/images/15.jpg"></a>
+              </div>
+
+            </div>
+
+
+            <!--<nav class="row">
                 <div class="col s12 nav-wrapper">
                     <div class="row">
                        <a class="col s3" href="#" class="brand-logo">Logo</a>
@@ -22,14 +55,14 @@
                             <li><a href="#">Amigos</a></li>
                             <li><a href="#"><img class= "responsive-img circle" src="assets/images/3.jpg" alt=""></a></li>
                         </ul>
-                    </div>    
+                    </div>
                 </div>
-            </nav>
-                            
+            </nav>-->
+
         </header>
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-    <script src="js/app.js"></script> 
+    <script src="js/app.js"></script>
 </body>
 </html>
