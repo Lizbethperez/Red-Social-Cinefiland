@@ -1,13 +1,13 @@
 img.responsive-img{
     max-width: 20%;
   }
-  
+
   /*FORMATOS DEL LOGIN */
   main div form {
     border: 3px solid #2992a7;
     border-radius: 5%;
   }
-  
+
   header div img {
     width: 80%;
   }
@@ -22,7 +22,17 @@ img.responsive-img{
   .format-image-claqueta{
     margin-top: 1em;
   }
-  
+
+
+.nav-wrapper {
+    background-color: #70D3FF;
+ }
+ .carrusel{
+   width: 50%;
+   height: 200vh;
+ }
+
+
   @media screen and (min-width:451px){
      header h2{
       font-family: 'Monoton', cursive;
@@ -30,5 +40,4 @@ img.responsive-img{
       color:#2992a7;
       text-align: center;
      }
-    }     
-          
+    }
