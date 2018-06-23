@@ -1,3 +1,4 @@
+/*
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.modal');
     var instances = M.Modal.init(elems);
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var newEmail=document.getElementById("new-email");
   var newPassword=document.getElementById("new-password");
 
-  //Creando un evento para el boton de login 
+  //Creando un evento para el boton de login
   btnLogin.addEventListener("click", e => {
       var userEmailValue=userEmail.value;
       var passwordValue=password.value;
@@ -49,3 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 } ());
+*/
+
+$(document).ready(function(){
+  $(".dropdown-trigger").dropdown();
+  $('.carousel').carousel();
+});
