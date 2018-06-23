@@ -1,0 +1,34 @@
+img.responsive-img{
+    max-width: 20%;
+  }
+  
+  /*FORMATOS DEL LOGIN */
+  main div form {
+    border: 3px solid #2992a7;
+    border-radius: 5%;
+  }
+  
+  header div img {
+    width: 80%;
+  }
+  .btn{
+    background-color:  #2992a7;
+  }
+  header h2{
+    font-family: 'Monoton', cursive;
+    font-size:30px;
+    color:#2992a7;
+  }
+  .format-image-claqueta{
+    margin-top: 1em;
+  }
+  
+  @media screen and (min-width:451px){
+     header h2{
+      font-family: 'Monoton', cursive;
+      font-size:60px;
+      color:#2992a7;
+      text-align: center;
+     }
+    }     
+          
