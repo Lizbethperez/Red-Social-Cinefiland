@@ -111,5 +111,28 @@ _Toda version debe ser mobile friendly._
 
 
 ## PROTOTIPADO
+***
+ ### historia de usuario
+ ***
+ ![historia de usuario](assets/images/historia-usuario.png)
+
+ >https://Pixton.com/mx/:0ltm6i9m
+
+***
+** Mock-up **
 
 
+_Log in_
+
+
+![log in](assets/images/LOG-IN.png)
+
+_Inicio_
+
+![index](assets/images/INDEX.png)
+
+
+_Web_
+
+
+![Vista](assets/images/VISTA .png)
