@@ -50,7 +50,6 @@ img.responsive-img{
  }
 
 
-
   @media screen and (min-width:451px){
      header h2{
       font-family: 'Monoton', cursive;
@@ -59,3 +58,36 @@ img.responsive-img{
       text-align: center;
      }
     }
+
+
+    /*FORMATO SECCIÓN CARD (ÁREA DE COMENTARIOS) Y SUS COMPONENTES*/ 
+    .fixed-action-btn {
+      bottom: 0;
+      position: relative;
+      right: 0;
+    }   
+    
+   .card {
+     width: 17em;
+     margin-top: 2em;
+   }
+
+   .card .card-content {
+     padding: 33px;
+   }
+
+   .color{
+    color: #e5003a;
+    transition: color ease .3s;
+    cursor: pointer;
+  }
+
+  .like {
+    margin-left: 4em;
+  }
+
+  .commentIcon {
+    padding-left: 1em;
+  }
+  
+
