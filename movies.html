@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CINFEILAND</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/assets/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/mainMovies.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+          <!--Obeteniedo la Barra de Navegacion Principal-->
+        <nav>
+            <div class="nav-wrapper row">
+                <div class="col s2 l1 m1 center">
+                    <a href=""><img class="left responsive-img format-image-claqueta" src="assets/images/claqueta.png" alt=""></a>
+                </div>
+                <div class="col s2 m3 l2" >
+                    <span class="format-title">CINEFILAND</span>
+                </div>
+                <div class="col s6 offset-s2 m4 l2">
+                    <ul id="nav-mobile" class="row">
+                        <div>
+                            <li class="col s2 offset-s4"><a href=""><i class="material-icons right">notifications</i></a></li>
+                            <li class="col s3"><a id="" href="#" data-target="slide-out" class="btn-floating btn-large left sidenav-trigger pulse"><i class=" material-icons">person</i></a>
+                        </div>
+                    </ul>  
+                </div>   
+            </div> 
+        </nav>
+    </header>
+    <!--OBTENIDO EL sideNav del perfil de usuarios-->
+    <section>
+        <ul id="slide-out" class="sidenav">
+                <li><div class="user-view">
+                <div class="background">
+                
+                </div>
+                <a href="#user"><img class="circle" src="assets/images/user.jpg"></a>
+                <a href="#name"><span class="white-text name">John Doe</span></a>
+                <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                </div></li>
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">info_outline</i>Informacion</div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                <li><div class="divider"></div></li>
+                <ul class="collapsible">
+                        <li id="Amigos">
+                        <div class="collapsible-header"><i class="material-icons">group</i>Amigos</div>
+                        <div class="collapsible-body">      
+                        </div>
+                        </li>
+                        <li id="watchList">
+                        <div class="collapsible-header"><i class="material-icons">movie</i>Watch List Movies</div>
+                        <!--<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>-->
+                        </li>
+                        <li id="peliculasVistas">
+                        <div class="collapsible-header"><i class="material-icons">local_movies</i>Peliculas Vistas</div>
+                        <!--<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>-->
+                        </li>
+                        <li><div class="divider"></div></li>
+                    <div ><i class="material-icons">local_movies</i>Salir</div>
+                    </ul>
+    </section>
+    <!--Modal Para añadir un amigo-->
+    <section>
+       <!-- Modal Structure -->
+        <div id="add-friend" class="modal">
+            <div class="modal-content">
+                <h4>Añadir Amigos</h4>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                              <i class="material-icons prefix">group</i>
+                              <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                              <label for="icon_prefix2">Friend Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <a id="add-friend-btn" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Añadir</a>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a  href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+            </div>
+            </div>
+    </section>
+
+        <!--                
+            <li><a href="#!"><i class="material-icons">group</i>Frinds</a></li>
+            <li><a href="#!">Second Link</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader">Subheader</a></li>
+            <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+          </ul>-->
+    <section>
+       <nav id="sizeSearch">
+            <div class="nav-wrapper">
+            <form>
+                <div class="input-field">
+                    <input id="search" type="search" required>
+                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                    <i class="material-icons">close</i>
+                </div>
+            </form>
+            </div>
+        </nav>
+    </section>
+    
+        <!-- ESTRENOS DE LA SEMANA -->
+    <section>
+        <div class="row">
+            <div class="col s8 offset-s2">
+                <p class="center">ESTRENOS DE LA SEMANA </p>
+            </div>
+            <div class="col s8 offset-s2 divider"></div>
+        </div>
+        <div class="row">
+            <div id="jurassicWorld" class="col s12">
+              <div class="row">
+                <div class="col s4 center">
+                    <img id="imgFormat" class="responsive-img" src="assets/images/jurassicWorl.jpg" alt="">
+                </div>
+                <div class="col s6 left">
+                    <span>
+                        Jurassic World: El Reino Caído	(2018)
+                        Estreno: 22 de Jun
+                    </span>
+                </div>
+              </div>
+            </div>
+              <div class="col s12">
+                    <div class="row">
+                      <div class="col s4 center">
+                          <img id="imgFormat" class="responsive-img" src="assets/images/lucky.jpg" alt="">
+                      </div>
+                      <div class="col s6 left">
+                          <span>
+                            Lucky	(2018)
+                            Estreno: 22 de Jun
+                          </span>
+                      </div>
+                    </div>
+              </div>
+              <div class="col s12">
+                    <div class="row">
+                      <div class="col s4 center">
+                          <img id="imgFormat" class="responsive-img" src="assets/images/reposteroberlin.jpg" alt="">
+                      </div>
+                      <div class="col s6 left">
+                          <span>
+                            El Repostero de Berlín	(2018)
+                            Estreno: 22 de Jun
+                          </span>
+                      </div>
+                    </div>
+              </div>
+              <div class="col s12">
+                    <div class="row">
+                      <div class="col s4 center">
+                          <img id="imgFormat" class="responsive-img" src="assets/images/chicapunk.jpg" alt="">
+                      </div>
+                      <div class="col s6 left">
+                          <span>
+                            Cómo Enamorar a una Chica Punk	(2018) <br>
+                            Estreno: 22 de Jun        
+                          </span>
+                      </div>
+                    </div>
+              </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col s8 offset-s2">
+                <p class="center">TOP TAQUILLA</p>
+            </div>
+            <div class="col s8 offset-s2 divider"></div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+              <div class="row">
+                <div class="col s4 center">
+                    <img id="imgFormat" class="responsive-img" src="assets/images/increibles.jpg" alt="">
+                </div>
+                <div class="col s6 left">
+                    <span>
+                        Los Increíbles 2 (2018)
+                        $180.0M
+                    </span>
+                </div>
+              </div>
+            </div>
+              <div class="col s12">
+                    <div class="row">
+                      <div class="col s4 center">
+                          <img id="imgFormat" class="responsive-img" src="assets/images/hanSolo.jpg" alt="">
+                      </div>
+                      <div class="col s6 left">
+                          <span>
+                            Han Solo: Una Historia de Star Wars	(2018)
+                            9.1M
+                          </span>
+                      </div>
+                    </div>
+              </div>
+              <div class="col s12">
+                    <div class="row">
+                      <div class="col s4 center">
+                          <img id="imgFormat" class="responsive-img" src="assets/images/tag.jpg" alt="">
+                      </div>
+                      <div class="col s6 left">
+                          <span>
+                            ¡Te Atrapé!	(2018)
+                            $14.6M
+                          </span>
+                      </div>
+                    </div>
+              </div>
+              <div class="col s12">
+                    <div class="row">
+                      <div class="col s4 center">
+                          <img id="imgFormat" class="responsive-img" src="assets/images/deadPool2.jpg">
+                      </div>
+                      <div class="col s6 left">
+                          <span>
+                            Deadpool 2	(2018)
+                            $8.8M
+                          </span>
+                      </div>
+                    </div>
+              </div>
+        </div>
+
+    </section>
+    <div class="row" style="display: none">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Te Atrape</span>
+              <p>Jurassic World: El... - 58
+                Una erupción volcánica amenaza a los dinosaurios restantes en la Isla Nublar,
+                 donde las criaturas han vagado libremente durante años tras de la...
+                
+                Actores: Chris Pratt, Bryce Dallas Howard
+                Directores: J.A. Bayona.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="js/assets/materialize.min.js"></script>
+    <script src="js/appIndex.js"></script> 
+</body>
+</html>

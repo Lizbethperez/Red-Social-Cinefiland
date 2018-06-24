@@ -1,53 +1,12 @@
-body {
+/*body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-}
+}*/
 
-main {
+/*main {
   flex: 1 0 auto;
-}
-
-
-img.responsive-img{
-    max-width: 20%;
-  }
-
-  /*FORMATOS DEL LOGIN */
-  main div form {
-    border: 3px solid #2992a7;
-    border-radius: 5%;
-  }
-
-  header div img {
-    width: 80%;
-  }
-  .btn{
-    background-color:  #2992a7;
-  }
-  header h2{
-    font-family: 'Monoton', cursive;
-    font-size:30px;
-    color:#2992a7;
-  }
-  .format-image-claqueta{
-    margin-top: 1em;
-    max-width: 50%;
-  }
-
-
-
-
-
-  @media screen and (min-width:451px){
-     header h2{
-      font-family: 'Monoton', cursive;
-      font-size:60px;
-      color:#2992a7;
-      text-align: center;
-     }
-    }
-
+}*/
 
     /*FORMATO SECCIÓN CARD (ÁREA DE COMENTARIOS) Y SUS COMPONENTES*/ 
     .fixed-action-btn {
@@ -81,16 +40,25 @@ img.responsive-img{
   
 
 /*formatos de Index html*/
+nav {
+  background-color: #0288d1;
+}
+img.responsive-img{
+  max-width:85%;
+  margin-top: 0.5em;
+}
 
 .format-title{
   font-size: 20px;
+  font-family: 'Monoton',cursive;
 }
+
 #sizeSearch{
   margin-top:0.5rem;
-  width: 70%;
-  height: 8vh;
+  width: 50%;
+  height: 7vh;
   margin-left: 0.5rem;
-  background-color:#00796b;
+  background-color:#eceff1;
 }
 .background{
   background-image:  url("../assets/images/pelis1.jpg");
@@ -98,9 +66,17 @@ img.responsive-img{
   background-size: cover;
   background-repeat: no-repeat;
 }
-.nav-wrapper {
-  background-color: #70D3FF;
+
+.btn-floating.btn-large{
+  width: 49px;
+  height: 49px;
+  margin: 0.2em;
+  background-color: #03a9f4;
 }
+nav .input-field label i{
+  color:black;
+}
+
 
 .page-footer{
 background-color: #70D3FF;
@@ -108,5 +84,5 @@ background-color: #70D3FF;
 
 .carrusel{
  width: 50%;
- height: 200vh;
+ height: 25vh;
 }

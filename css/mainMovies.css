@@ -1,0 +1,8 @@
+#imgFormat{
+    max-width: 50%;
+    margin-top: 0.5em;
+  }
+
+#jurassicWorld :hover{
+       display: block;
+}
