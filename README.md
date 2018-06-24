@@ -68,4 +68,4 @@ _Toda version debe ser mobile friendly._
 ** Historia de usuario **
 
 https://Pixton.com/mx/:0ltm6i9m
-![Historia de usuario]("https://www.pixton.com/mx/preview/embed/0ltm6i9m/iframe")
+![Historia de usuario](https://www.pixton.com/mx/preview/embed/0ltm6i9m/iframe)
