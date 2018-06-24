@@ -25,13 +25,9 @@
    }
 
    .color{
-    color: #e5003a;
+    color: rgb(52, 65, 177);
     transition: color ease .3s;
     cursor: pointer;
-  }
-
-  .like {
-    margin-left: 4em;
   }
 
   .commentIcon {
@@ -85,4 +81,14 @@ background-color: #70D3FF;
 .carrusel{
  width: 50%;
  height: 25vh;
+}
+
+
+/*SECCIÓN SIDENAV-*/
+.exit {
+  margin-left: 0.8em;
+}
+
+.exit-text {
+  padding-left: 1em;
 }
