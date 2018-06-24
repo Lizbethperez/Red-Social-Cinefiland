@@ -52,9 +52,67 @@ document.addEventListener('DOMContentLoaded', function() {
 } ());
 */
 
+//Comentarios
+function getCard() {
+    var inptComment = $("#comment").val();
+    //console.log(inptComment);
+    
+    //Limpiar input
+    $("#comment").val("");
+
+    addCommentCard(inptComment);
+}
+
+var card = '<div class="row">' +
+                    '<div class="col s6 offset-s2">' +
+                        '<div class="card">' +
+                            '<div class="card-content">' +
+                                '<h5>__inptComment__</h5>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>'
+
+
+function addCommentCard(comment) {
+    var finalCard = ""; //declarar variable
+    finalCard = card.replace("__inptComment__", comment) //primero lo que se a quitar, segundo por lo que se va a reemplazar
+                
+    
+    var container = document.createElement("div");
+    container.classList = "row";
+    
+
+    var likeIcon = document.createElement("i");
+    likeIcon.innerHTML = "thumb_up";
+    likeIcon.classList.add("material-icons", "like");
+    
+
+    var answerComment = document.createElement("i");
+    answerComment.innerHTML = "insert_comment";
+    answerComment.classList.add("material-icons", "commentIcon");
+
+    container.append(likeIcon, answerComment);
+    
+    //Se agregan comentarios en pantalla
+    $("main").append(finalCard, container); 
+
+    $(".like").click(addLike);    
+}
+
+
+function addLike() {
+    var likes = document.getElementsByClassName("like");
+
+    for(var i = 0; i < likes.length; i++) {
+        document.getElementsByClassName("like")[i].classList.toggle("color");
+    }  
+}
+
+
 $(document).ready(function(){
   $(".dropdown-trigger").dropdown();
   $('.carousel').carousel();
   $('.sidenav').sidenav();
-
+  $("#bttn-send").click(getCard);  
 });
