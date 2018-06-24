@@ -5,13 +5,18 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Modal.init(elems);
   //Mandando llamar el sidenav
   
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems);
+    var elems2 = document.querySelectorAll('.sidenav');
+    var instances2 = M.Sidenav.init(elems2);
   
   //Se manda a llamar la barra de opciones del perfil
   
-        var elems = document.querySelectorAll('.collapsible');
-        var instances = M.Collapsible.init(elems);
+  var elems3 = document.querySelectorAll('.collapsible');
+  var instances3 = M.Collapsible.init(elems3);
+
+  var elems4 = document.querySelectorAll('.fixed-action-btn');
+  var instances4 = M.FloatingActionButton.init(elems4,{
+    direction:"right"
+  });
   
   });
   
@@ -149,7 +154,7 @@ function addLike() {
 
 $(document).ready(function(){
   $(".dropdown-trigger").dropdown();
-  $('.carousel').carousel();
+ // $('.carousel').carousel();
   $('.sidenav').sidenav();
   $("#bttn-send").click(getCard);  
 });
