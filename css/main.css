@@ -24,7 +24,6 @@ img.responsive-img{
     max-width: 50%;
   }
 
-<<<<<<< HEAD
 
 .nav-wrapper {
     background-color: #70D3FF;
@@ -35,8 +34,7 @@ img.responsive-img{
  }
 
 
-=======
->>>>>>> 3527c4a70b6e35386c546b219066960937a2eb13
+
   @media screen and (min-width:451px){
      header h2{
       font-family: 'Monoton', cursive;
