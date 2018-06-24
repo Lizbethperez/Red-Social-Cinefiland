@@ -64,3 +64,8 @@ Crear una red que en la que se puedan  crear Perfiles de usuarios y estos
 puedan ver las actualizaciones de todos tus contactos mediante un newsfeed,
 se incluirá un lugar donde poder escribir posts y también subir fotos.
 _Toda version debe ser mobile friendly._
+
+** Historia de usuario **
+
+https://Pixton.com/mx/:0ltm6i9m
+![Historia de usuario]("https://www.pixton.com/mx/preview/embed/0ltm6i9m/iframe")
