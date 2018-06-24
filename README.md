@@ -109,5 +109,7 @@ puedan ver las actualizaciones de todos tus contactos mediante un newsfeed,
 se incluirá un lugar donde poder escribir posts y también subir fotos.
 _Toda version debe ser mobile friendly._
 
+
 ## PROTOTIPADO
+
 
