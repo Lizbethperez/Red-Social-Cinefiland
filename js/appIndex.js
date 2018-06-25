@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var elems3 = document.querySelectorAll('.collapsible');
   var instances3 = M.Collapsible.init(elems3);
 
+  //Ejecutar botones floating sección comentarios 
+
   var elems4 = document.querySelectorAll('.fixed-action-btn');
   var instances4 = M.FloatingActionButton.init(elems4,{
     direction:"right"
@@ -94,67 +96,72 @@ document.addEventListener('DOMContentLoaded', function() {
         
   });
 
+  //FUNCIONALIDAD DE SECCIÓN DE COMENTARIOS (TEXT AREA)
+
   function getCard() {
     var inptComment = $("#comment").val();
     //console.log(inptComment);
-    
+
     //Limpiar input
     $("#comment").val("");
 
     addCommentCard(inptComment);
-}
+  }
 
 
-var card = '<div class="row">' +
+var card = '<div class="row">' + 
+                 '<div>' +
                     '<div class="col s6 offset-s2">' +
                         '<div class="card">' +
                             '<div class="card-content">' +
                                 '<h5>__inptComment__</h5>' +
+                                '<i class="material-icons left like" onclick= "addLike()">thumb_up</i>' +
+                                '<i class="material-icons left comment">insert_comment</i>' +
+                                '<a class="waves-effect waves-light btn modal-trigger delete-bttn btn-small right" onclick = "deleteComment()">Delete</a>' +
+                                '<br>' +
                             '</div>' +
                         '</div>' +
                     '</div>' +
-                '</div>'
+                 '</div>' +
+            '</div>'
+
 
 
 function addCommentCard(comment) {
-    var finalCard = ""; //declarar variable
-    finalCard = card.replace("__inptComment__", comment) //primero lo que se a quitar, segundo por lo que se va a reemplazar
-                
-    
-    var container = document.createElement("div");
-    container.classList = "row";
-    
 
-    var likeIcon = document.createElement("i");
-    likeIcon.innerHTML = "thumb_up";
-    likeIcon.classList.add("material-icons", "like");
-    
+  var finalCard = ""; //declarar variable
 
-    var answerComment = document.createElement("i");
-    answerComment.innerHTML = "insert_comment";
-    answerComment.classList.add("material-icons", "commentIcon");
+  finalCard = card.replace("__inptComment__", comment) //primero lo que se a quitar, segundo por lo que se va a reemplazar
 
-    container.append(likeIcon, answerComment);
-    
-    //Se agregan comentarios en pantalla
-    $("main").append(finalCard, container); 
-
-    $(".like").click(addLike);    
+  $("main").append(finalCard);
 }
 
 
 function addLike() {
-    var likes = document.getElementsByClassName("like");
 
-    for(var i = 0; i < likes.length; i++) {
-        document.getElementsByClassName("like")[i].classList.toggle("color");
-    }  
+  var likes = document.getElementsByClassName("like");
+
+  for (var i = 0; i < likes.length; i++) {
+    document.getElementsByClassName("like")[i].classList.toggle("color");
+  }
 }
 
 
-$(document).ready(function(){
+function deleteComment() {
+
+  var eventCurrent = $(event.currentTarget);
+  var parent = eventCurrent.parent();
+  var parent1 = parent.parent();
+  var parent2 = parent1.parent();
+  parent2.remove();
+}
+
+
+//INICIALIZAR JQUERY CUANDO EL DOM SE ENCUENTRE CARGADO
+
+$(document).ready(function () {
   $(".dropdown-trigger").dropdown();
- // $('.carousel').carousel();
+  // $('.carousel').carousel();
   $('.sidenav').sidenav();
   $("#bttn-send").click(getCard);  
 });
