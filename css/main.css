@@ -105,3 +105,7 @@ background-color: #70D3FF;
 .review-text {
   margin-left: -1em;
 }
+
+.terminal-movie, .star-movie, .venom-movie {
+  margin-top: 2em;
+}
