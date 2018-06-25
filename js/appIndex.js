@@ -157,8 +157,4 @@ $(document).ready(function(){
  // $('.carousel').carousel();
   $('.sidenav').sidenav();
   $("#bttn-send").click(getCard);  
-  $('.carousel.carousel-slider').carousel({
-    fullWidth: true,
-    indicators: true
-  });
 });
