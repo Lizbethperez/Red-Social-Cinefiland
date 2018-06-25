@@ -1,4 +1,3 @@
-//USANDO FIREBASE PARA INICIAR SESION
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.modal');
