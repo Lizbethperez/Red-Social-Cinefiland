@@ -84,9 +84,9 @@ background-color: #70D3FF;
 }
 
 
-/*SECCIÓN SIDENAV-*/s
+/*SECCIÓN SIDENAV-*/
 .exit {
-  margin-left: 0.8em;
+  margin-left: 0.8em !important;
 }
 
 .exit-text {
