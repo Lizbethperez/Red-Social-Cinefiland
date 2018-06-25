@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   });
   
-  //(function(){
+  (function(){
     // Initialize Firebase
     var config = {
       apiKey: "AIzaSyAtdoJpgCIo3WvZb2vlXg48Qu-IE-Rwkkc",
@@ -75,12 +75,12 @@ document.addEventListener('DOMContentLoaded', function() {
           $("#Amigos").append("<div class='friendElement'><div class='chip col s6'><img src='assets/images/user.jpg' alt='Contact Person'>"+Amigos[amigo]+"</div></div>");
           $(".friendElement").addClass("collapsible-body"); 
         }
-        $("#Amigos").append("<div class='col s4 friendElement'><a href='#add-friend' class='modal-trigger'> <i class='material-icons'>add_circle_outline </i>Anadir Amigos </a></div>");
+        $("#Amigos").append("<div id='addfriends' class='col s4 friendElement'><a href='#add-friend' class='modal-trigger'> <i class='material-icons'>add_circle_outline </i>Anadir Amigos </a></div>");
           $(".friendElement").addClass("collapsible-body");
-          
+        /*  
           function writeUserData(userId, name) {
             if(name!=""){
-              var amigos = snap.child("amigos").val();
+              var amigos = snap.child("Amigos").val();
               var amigonumero= Object.keys(Amigos).length+1;
               var amigonext = "amigo"+ amigonumero.toString();
               firebase.database().ref(userId).update({
@@ -90,10 +90,118 @@ document.addEventListener('DOMContentLoaded', function() {
           }
           var valueNameFriend = $("#icon_prefix2").val();
           $("#add-friend-btn").click(writeUserData(userName, valueNameFriend));
+      */
+        });
+        
+  });
+  } ());
+  function writeUserData() {
+   // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAtdoJpgCIo3WvZb2vlXg48Qu-IE-Rwkkc",
+      authDomain: "mi-p-d4a76.firebaseapp.com",
+      databaseURL: "https://mi-p-d4a76.firebaseio.com",
+      projectId: "mi-p-d4a76",
+      storageBucket: "mi-p-d4a76.appspot.com",
+      messagingSenderId: "163277132167"
+    };
+    //firebase.initializeApp(config);
+    var cont = 0;
+    firebase.auth().onAuthStateChanged(firebaseUser =>{
+      if(firebaseUser){
+          console.log("logeado");
+          //location.href="index.html"
+      }else{
+          console.log("not loged in");
+          alert("your session expired, please log in again");
+          location.href="login.html";
+      }
+  
+    var input_text = document.getElementById("icon_prefix2");
+    var input_text_value = input_text.value;
+  
+      var user = firebase.auth().currentUser;
+      var userName = user.email.match(/^([^@]*)@/)[1];
+    var rootRef = firebase.database().ref(userName);
+    rootRef.on("value", snap => {
+    if(cont>0)
+      return;
+              var amigos = snap.child("Amigos").val();
+              var amigonumero= Object.keys(amigos).length+1;
+        var amigo_index= Object.keys(amigos).length;
+        var amigoindexValue = "amigo"+ amigo_index.toString();
+              var amigonext = "amigo"+ amigonumero.toString();
+        cont++;
+              firebase.database().ref(userName+"/Amigos").update({
+                [amigonext]: input_text_value
+              });
+      //return;
+        //    }
+  
+      //var rootRef = firebase.database().ref().child(userName);
+      console.log(userName);
+   
+          $("#addfriends").remove();
+          //$("#Amigos").append("<div class='friendElement'><span>"+Amigos[amigo]+"</span></div>");
+          //$(".friendElement").addClass("collapsible-body row");
+          $("#Amigos").append("<div class='friendElement'><div class='chip col s6'><img src='assets/images/user.jpg' alt='Contact Person'>"+input_text_value+"</div></div>");
+          $(".friendElement").addClass("collapsible-body"); 
+        
+        $("#Amigos").append("<div id='addfriends' class='col s4 friendElement'><a href='#add-friend' class='modal-trigger'> <i class='material-icons'>add_circle_outline </i>Anadir Amigos </a></div>");
+          $(".friendElement").addClass("collapsible-body");
   
         });
         
   });
+  }
+  
+  var selectedFile;
+  
+  $("#file").on("change", function(event){
+    //$("#uploadButton").show()
+    selectedFile = event.target.files[0];
+    uploadFile();
+  });
+  
+  function uploadFile() {
+   var user = firebase.auth().currentUser;
+      var userName = user.email.match(/^([^@]*)@/)[1];
+  var filename = userName;
+  var storageRef = firebase.storage().ref('/profileImages/' + filename);
+  //var fileRef = storage.child(filename);
+  var upLoadTask = storageRef.put(selectedFile);
+  upLoadTask.on('state_changed', function(snapshot){
+  }, function(error) {
+  }, function() {
+    var downloadURL = upLoadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+      console.log('File available at', downloadURL);
+    });
+  var user = firebase.auth().currentUser;
+      var userName = user.email.match(/^([^@]*)@/)[1];
+    var rootRef = firebase.database().ref(userName);
+    //var starsRef = storageRef.child('/profileImages/' + filename)getDownloadURL().then(function(url) {});
+    //var downloadURL = upLoadTask.snapshot.downloadURL;
+    rootRef.on("value", snap => {
+    /*if(cont>0)
+      return;
+              var amigos = snap.child("Amigos").val();
+              var amigonumero= Object.keys(amigos).length+1;
+        var amigo_index= Object.keys(amigos).length;
+        var amigoindexValue = "amigo"+ amigo_index.toString();
+              var amigonext = "amigo"+ amigonumero.toString();
+        cont++;
+        */
+              firebase.database().ref().update({
+               profileImage: downloadURL
+              });
+  
+  });
+  
+  });
+  
+  
+  }
+  
 
   //FUNCIONALIDAD DE SECCIÓN DE COMENTARIOS (TEXT AREA)
 
