@@ -139,4 +139,4 @@ _Web_
 
 ** Paleta de colores**
 
-![colores](assets/images/4.jpj)
+![colores](assets/images/4.jpg)
