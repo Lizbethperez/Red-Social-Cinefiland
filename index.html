@@ -84,16 +84,22 @@
               
               </div>
               <a href="#user"><img class="circle" src="assets/images/user.jpg"></a>
-              <a href="#name"><span class="white-text name">John Doe</span></a>
+              <a id="name" href="#name"><span class="white-text name">John Doe</span></a>
               <a href='#add-friend'class="white-text" > <i class='material-icons'>add_circle_outline </i>
-                <input id="file" type="file" class="upload-group"> </a>
-              <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+              <input id="file" type="file" class="upload-group"> </a>
+              <a id="email" href="#email"><span class="white-text email"></span></a>
 
               </div></li>
               <ul class="collapsible">
-                  <li>
+                  <li id="personal-data">
                       <div class="collapsible-header"><i class="material-icons">info_outline</i>Informacion</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                      <div class="collapsible-body">
+                        <span>Edad: </span><span id="profile-age"></span><br>
+                        <span>Ciudad: </span><span id="profile-city"></span><br>
+                        <span>Ocupacion: </span><span id="profile-job"></span><br>
+                        <span>Estado Civil: </span><span id="profile-status"></span>
+                       
+                      </div>
                   </li>
               <li><div class="divider"></div></li>
               <ul class="collapsible">
@@ -108,7 +114,7 @@
                       </li>
                       <li id="peliculasVistas">
                       <div class="collapsible-header"><i class="material-icons">local_movies</i>Peliculas Vistas</div>
-                      <!--<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>-->
+                      
                       </li>
                       
                         <!--<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>-->
@@ -117,7 +123,7 @@
                       <li id= "review">
                         <a href="movies.html"><i class="material-icons filter">movie_filter</i><span class="review-text">Review</span></a>
                         </li>
-                  <div ><i class="material-icons exit">forward</i><span class="exit-text">Salir</span></div>
+                  <div ><a onclick="Logout()"><i class="material-icons exit">forward</i><span class="exit-text">Salir</span></a></div>
                   </ul>
   </section><br>
     <!--Sección de comentarios-->
@@ -143,7 +149,6 @@
                 </main>
   <!--Modal Para añadir un amigo-->
   <section>
-    <!-- Modal Structure -->
     <div id="add-friend" class="modal">
       <div class="modal-content col s12">
         <h4>Añadir Amigos</h4>
@@ -157,8 +162,8 @@
               </div>
             </div>
             <div class="row">
-              <a id="add-friend-btn" class="waves-effect waves-light btn">
-                <i class="material-icons left">add_circle_outline</i>Añadir</a>
+              <a id="add-friend-btn" class="waves-effect waves-light btn" onclick="writeUserData()">
+                <i class="modal-close material-icons left">add_circle_outline</i>Añadir</a>
 
             </div>
           </form>
@@ -169,8 +174,107 @@
       </div>
     </div>
   </section>
+  <!--Modal Para añadir una Pelicula al Watch-List-->
+  <section>
+    <div id="add-movieWatchList" class="modal">
+      <div class="modal-content col s12">
+        <h4>Añadir Pelicula al Watch-List</h4>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <i class="material-icons prefix">movie_filter</i>
+                <textarea id="value-watch-list" class="materialize-textarea"></textarea>
+                <label for="value-watch-list">Movie Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <a id="add-watchListMovie-btn" class="waves-effect waves-light btn" onclick="writeWatchlistItem()">
+                <i class="modal-close material-icons left">add_circle_outline</i>Añadir</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+      </div>
+    </div>
+  </section>
+<!--Modal Para añadir Peliculas Vistas-->
+<section>
+    <div id="add-watchedMovie" class="modal">
+      <div class="modal-content col s12">
+        <h4>Añadir Pelicula Vista</h4>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <i class="material-icons prefix">movie_filter</i>
+                <textarea id="watched-movie-value" class="materialize-textarea"></textarea>
+                <label for="watched-movie-value">Movie Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <a id="add-watchedMovie-btn" class="waves-effect waves-light btn" onclick="writeMovies()">
+                <i class="modal-close material-icons left">add_circle_outline</i>Añadir</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+      </div>
+    </div>
+  </section>
+<!--Modal Para Cambiar Informacion-->
+<section>
+    <div id="change-Info" class="modal">
+      <div class="modal-content col s12">
+        <h4>Editar Informacion</h4>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <i class="material-icons prefix">user</i>
+                <textarea id="ageValue" class="materialize-textarea"></textarea>
+                <label for="ageValue">Edad</label>
+              </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">user</i>
+                  <textarea id="cityValue" class="materialize-textarea"></textarea>
+                  <label for="cityValue">Ciudad</label>
+                </div>
+              </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                      <i class="material-icons prefix">user</i>
+                      <textarea id="Ocupacion" class="materialize-textarea"></textarea>
+                      <label for="Ocupacion">Ocupacion</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="input-field col s6">
+                        <i class="material-icons prefix">user</i>
+                        <textarea id="estado-civil" class="materialize-textarea"></textarea>
+                        <label for="estado-civil">estado-civil</label>
+                      </div>
+                    </div>
+              <div class="row">
+               <a id="add-watchedMovie-btn" class="waves-effect waves-light btn" onclick="changeProfileInfo()">
+              <i class="modal-close material-icons left">add_circle_outline</i>Añadir</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+      </div>
+    </div>
+  </section>
 
-  
+    <!--Sección de VIDEOS-->
   <div class="row">
       <iframe class="col s12" width="250" height="250" src="https://www.youtube.com/embed/Eix-Ujvko-0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
