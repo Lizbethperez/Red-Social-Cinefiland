@@ -49,6 +49,11 @@ img.responsive-img{
    height: 200vh;
  }
 
+ .video-container{
+   width: 45%;
+   height: 30vh;
+ }
+
 
   @media screen and (min-width:451px){
      header h2{
@@ -60,13 +65,13 @@ img.responsive-img{
     }
 
 
-    /*FORMATO SECCIÓN CARD (ÁREA DE COMENTARIOS) Y SUS COMPONENTES*/ 
+    /*FORMATO SECCIÓN CARD (ÁREA DE COMENTARIOS) Y SUS COMPONENTES*/
     .fixed-action-btn {
       bottom: 0;
       position: relative;
       right: 0;
-    }   
-    
+    }
+
    .card {
      width: 17em;
      margin-top: 2em;
@@ -89,5 +94,3 @@ img.responsive-img{
   .commentIcon {
     padding-left: 1em;
   }
-  
-

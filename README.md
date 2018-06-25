@@ -136,3 +136,7 @@ _Web_
 
 
 ![Vista](assets/images/VISTA .png)
+
+** Paleta de colores**
+
+![colores](assets/images/4.jpj)
