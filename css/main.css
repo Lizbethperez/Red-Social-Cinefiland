@@ -1,8 +1,8 @@
-/*body {
+body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-}*/
+}
 
 /*main {
   flex: 1 0 auto;
@@ -84,7 +84,7 @@ background-color: #70D3FF;
 }
 
 
-/*SECCIÓN SIDENAV-*/
+/*SECCIÓN SIDENAV-*/s
 .exit {
   margin-left: 0.8em;
 }
