@@ -92,3 +92,16 @@ background-color: #70D3FF;
 .exit-text {
   padding-left: 1em;
 }
+
+/*.review {
+  position: relative;
+  left: 0.1em;
+}*/
+
+#review {
+  margin-left: -1em;
+}
+
+.review-text {
+  margin-left: -1em;
+}
