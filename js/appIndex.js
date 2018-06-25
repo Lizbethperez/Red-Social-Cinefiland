@@ -186,8 +186,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }, function() {
     var downloadURL = upLoadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
       console.log('File available at', downloadURL);
+      var linkUrlImag=document.getElementById('linkImageProfile');
+      var imageProfile= document.getElementById('profileImage1');
+      imageProfile.setAttribute("src", downloadURL);
+      linkUrlImag.appendChild(imageProfile);
     });
-  var user = firebase.auth().currentUser;
+   /* var user = firebase.auth().currentUser;
       var userName = user.email.match(/^([^@]*)@/)[1];
     var rootRef = firebase.database().ref(userName);
     //var starsRef = storageRef.child('/profileImages/' + filename)getDownloadURL().then(function(url) {});
@@ -201,11 +205,11 @@ document.addEventListener('DOMContentLoaded', function() {
         var amigoindexValue = "amigo"+ amigo_index.toString();
               var amigonext = "amigo"+ amigonumero.toString();
         cont++;
-        */
+        
               firebase.database().ref().update({
                profileImage: downloadURL
               });
-  });
+  });*/
   });
   }
 
@@ -476,3 +480,9 @@ $(document).ready(function () {
   $('.sidenav').sidenav();
   $("#bttn-send").click(getCard);  
 });
+
+
+/*var storage = firebase.storage();
+var getImageUrl = function (uploadFile) {
+    return storage.ref('images/' + uploadFile + '.jpg').getDownloadURL();
+};*/
